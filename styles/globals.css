@@ -14,3 +14,22 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.main_window {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+  display: grid;
+  place-content: center;
+}
+
+.window {
+  height: 580px;
+  width: 880px;
+  border: 1px solid black;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
