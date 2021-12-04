@@ -20,8 +20,6 @@ export function MainComponent({ history }) {
         window.open("http://" + website);
       },
     },
-
-    // https://www.google.com/search?q=romantic+songs&sxsrf=AOaemvKD3BPmHpJcixK6dAMjSBg_OBVJLg%3A1638612910259&source=hp&ei=rj-rYavXDY_S1sQP-oSamAc&iflsig=ALs-wAMAAAAAYatNvgsVlO8YxktIykFcwoKH3Nv3DGR0&gs_ssp=eJzj4tVP1zc0TDbOLShIqqwwYPTiK8rPTcwryUxWKM7PSy8GAJ-rCqU&oq=romatic+onsgs&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCC4QsQMQDTIECC4QDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDToECCMQJzoRCC4QgAQQsQMQgwEQxwEQrwE6BQgAEIAEOg4ILhCABBCxAxDHARDRAzoICC4QsQMQgwE6BQguEIAEOgsIABCABBCxAxCDAToOCC4QgAQQsQMQxwEQowI6CwguEIAEELEDEIMBOggILhCABBCxAzoICAAQgAQQsQM6BwguELEDEAo6BwgAELEDEAo6BAgAEAo6CAgAELEDEIMBOgUIABCxA1AAWLcbYPInaAFwAHgBgAGQA4gBmBOSAQowLjEyLjEuMC4xmAEAoAEB&sclient=gws-wiz
     {
       command: "play *",
       callback: (website) => {
@@ -34,12 +32,8 @@ export function MainComponent({ history }) {
         window.open("http://youtube.com/" + website);
       },
     },
-    {
-      command: "animate the web app",
-      callback: (website) => {
-        window.open("http://youtube.com/" + website);
-      },
-    },
+
+    // document.getElementById("MyElement").classList.remove('MyClass');
   ];
 
   const {
@@ -50,9 +44,7 @@ export function MainComponent({ history }) {
   } = useSpeechRecognition({ commands });
 
   if (!browserSupportsSpeechRecognition) {
-    // return Router.push({
-    //   pathname: "/error",
-    // });
+    <h2>Sorry! Your browser does not support speech recognition</h2>;
   }
 
   const speaker = () => {
@@ -72,11 +64,15 @@ export function MainComponent({ history }) {
           referrerpolicy="no-referrer"
           defer
         />{" "}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </Head>
       <div className="main_window">
         <div className="window">
           <div className="text">
-            <h2 className="text-center heading mt-4">VOICE COORDINATOR</h2>
+            <h2 className="text-center heading mt-4 ">VOICE COORDINATOR</h2>
             <p className="p mt-3">
               You can record the speech of others while they are speaking and
               you can keep track of them through this app along with your voice
