@@ -32,6 +32,12 @@ export function MainComponent({ history }) {
         window.open("http://youtube.com/" + website);
       },
     },
+    {
+      command: "close *",
+      callback: (website) => {
+        window.close(website);
+      },
+    },
 
     // document.getElementById("MyElement").classList.remove('MyClass');
   ];
