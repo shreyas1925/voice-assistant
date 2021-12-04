@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@700&family=Merriweather:wght@900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -15,6 +15,18 @@ a {
   box-sizing: border-box;
 }
 
+.text p {
+  /* width: 34rem; */
+  font-size: 18px;
+}
+.ptag {
+  width: 23rem;
+  margin-left: 24px;
+}
+.ptag2 {
+  width: 23rem;
+  margin-left: 24px;
+}
 .main_window {
   height: 100vh;
   width: 100vw;
@@ -32,4 +44,54 @@ a {
   background-color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.imgs {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 15px 0;
+  /* margin-left: 10px;
+  margin-right: auto; */
+}
+
+.text .p {
+  color: black;
+  text-align: center;
+  margin-left: 24px;
+  margin-right: auto;
+  justify-text: center;
+}
+
+.heading {
+  color: goldenrod;
+  font-size: 35px;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  /* font-family: "Merriweather", serif; */
+}
+
+.icons button {
+  width: 10rem;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  color: white;
+  background-color: darkgoldenrod;
+  border: none;
+  outline: none;
+  margin: 18px auto 10px 20px;
+}
+
+.icons button:hover {
+  width: 10rem;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  color: darkgoldenrod;
+  background-color: white;
+  border: 1px solid darkgoldenrod;
+  margin: 18px auto 10px 20px;
 }
