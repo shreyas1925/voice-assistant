@@ -19,10 +19,13 @@ a {
   /* width: 34rem; */
   font-size: 18px;
 }
+
 .ptag {
   width: 23rem;
   margin-left: 24px;
+  filter: brightness(0%);
 }
+
 .ptag2 {
   width: 23rem;
   margin-left: 24px;

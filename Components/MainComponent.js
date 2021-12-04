@@ -9,12 +9,45 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 export function MainComponent({ history }) {
+  const commands = [
+    {
+      command: "clear all",
+      callback: ({ resetTranscript }) => resetTranscript(),
+    },
+    {
+      command: "take me to *",
+      callback: (website) => {
+        window.open("http://" + website);
+      },
+    },
+
+    // https://www.google.com/search?q=romantic+songs&sxsrf=AOaemvKD3BPmHpJcixK6dAMjSBg_OBVJLg%3A1638612910259&source=hp&ei=rj-rYavXDY_S1sQP-oSamAc&iflsig=ALs-wAMAAAAAYatNvgsVlO8YxktIykFcwoKH3Nv3DGR0&gs_ssp=eJzj4tVP1zc0TDbOLShIqqwwYPTiK8rPTcwryUxWKM7PSy8GAJ-rCqU&oq=romatic+onsgs&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCC4QsQMQDTIECC4QDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDTIECAAQDToECCMQJzoRCC4QgAQQsQMQgwEQxwEQrwE6BQgAEIAEOg4ILhCABBCxAxDHARDRAzoICC4QsQMQgwE6BQguEIAEOgsIABCABBCxAxCDAToOCC4QgAQQsQMQxwEQowI6CwguEIAEELEDEIMBOggILhCABBCxAzoICAAQgAQQsQM6BwguELEDEAo6BwgAELEDEAo6BAgAEAo6CAgAELEDEIMBOgUIABCxA1AAWLcbYPInaAFwAHgBgAGQA4gBmBOSAQowLjEyLjEuMC4xmAEAoAEB&sclient=gws-wiz
+    {
+      command: "play *",
+      callback: (website) => {
+        window.open("http://google.com/search?q=" + website);
+      },
+    },
+    {
+      command: "open youtube channel of *",
+      callback: (website) => {
+        window.open("http://youtube.com/" + website);
+      },
+    },
+    {
+      command: "animate the web app",
+      callback: (website) => {
+        window.open("http://youtube.com/" + website);
+      },
+    },
+  ];
+
   const {
     transcript,
     listening,
     resetTranscript,
     browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  } = useSpeechRecognition({ commands });
 
   if (!browserSupportsSpeechRecognition) {
     // return Router.push({
