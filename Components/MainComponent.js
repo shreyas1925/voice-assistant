@@ -93,11 +93,19 @@ export function MainComponent({ history }) {
             </div>
             <div className="icons d-flex flex-row justify-content-around align-items-center">
               <div className="speaker" onClick={speaker}>
-                <img src="https://img.icons8.com/ios-filled/40/000000/speaker.png" />
+                {listening ? (
+                  <img src="https://img.icons8.com/ios-filled/50/000000/mute.png" />
+                ) : (
+                  <img src="https://img.icons8.com/ios-filled/40/000000/speaker.png" />
+                )}
               </div>
               <button onClick={resetTranscript}>RESET</button>
               <div className="mike" onClick={SpeechRecognition.startListening}>
-                <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/48/000000/external-microphone-radio-vitaliy-gorbachev-flat-vitaly-gorbachev.png" />
+                {listening ? (
+                  <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/48/000000/external-microphone-radio-vitaliy-gorbachev-flat-vitaly-gorbachev.png" />
+                ) : (
+                  <img src="https://img.icons8.com/ios-filled/48/000000/no-microphone--v1.png" />
+                )}
               </div>
             </div>
           </div>
