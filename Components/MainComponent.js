@@ -85,8 +85,8 @@ export function MainComponent({ history }) {
             </p>
           </div>
           <div className="info">
-            <div className="row">
-              <div className="col-lg-6 col-md-6 col-12">
+            <div className="row infos">
+              <div className="col-lg-6 col-md-6 col-sm-6">
                 <div className="dictate_info">
                   <div className="imgs">
                     <Image src={manspeaking} />
@@ -99,7 +99,7 @@ export function MainComponent({ history }) {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-6 col-12">
+              <div className="col-lg-6 col-md-6 col-sm-6">
                 <div className="listen_info ">
                   <div className="imgs">
                     <Image src={colormphone} />
