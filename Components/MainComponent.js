@@ -11,8 +11,16 @@ import SpeechRecognition, {
 export function MainComponent({ history }) {
   const commands = [
     {
-      command: "clear all",
+      command: "clear",
       callback: ({ resetTranscript }) => resetTranscript(),
+    },
+    {
+      command: "Hey jarvis how are you",
+      callback: () => {
+        var textmsg = "I am fine what about you";
+        document.getElementById("textarea").innerHTML = textmsg;
+        window.speechSynthesis.speak(textmsg);
+      },
     },
     {
       command: "take me to *",
@@ -35,9 +43,14 @@ export function MainComponent({ history }) {
     {
       command: "close *",
       callback: (website) => {
-        window.close(website);
+        window.close("http://" + website);
       },
     },
+    // {
+    //   command: "Hello *",
+    //   callback: (command) => setMessage(`Hi there! You said: "${command}"`),
+    //   matchInterim: true,
+    // },
 
     // document.getElementById("MyElement").classList.remove('MyClass');
   ];
