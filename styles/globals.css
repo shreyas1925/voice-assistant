@@ -54,6 +54,21 @@ a {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.main_recorder {
+  height: 580px;
+  width: 880px;
+  background: url("../assets/images/banner_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 .imgs {
   height: 100px;
   width: 100px;
