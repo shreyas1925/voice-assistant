@@ -9,6 +9,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 export function MainComponent({ history }) {
+  
   const commands = [
     {
       command: "clear",
