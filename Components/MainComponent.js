@@ -15,7 +15,7 @@ export function MainComponent({ history }) {
       callback: ({ resetTranscript }) => resetTranscript(),
     },
     {
-      command: "Hey jarvis how are you",
+      command: "Hey how are you",
       callback: () => {
         var textmsg = "I am fine what about you";
         document.getElementById("textarea").innerHTML = textmsg;
