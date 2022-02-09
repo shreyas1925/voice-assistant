@@ -9,7 +9,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 export function MainComponent({ history }) {
-  
+
   const commands = [
     {
       command: "clear",
@@ -90,6 +90,14 @@ export function MainComponent({ history }) {
         />
       </Head>
       <div className="main_window">
+        <div className="slideWindow">
+          <div className="comm">
+            Commands
+          </div>
+          <div className="sugg">
+            Suggestions
+          </div>
+        </div>
         <div className="window">
           <div className="text">
             <h2 className="text-center heading mt-4 ">VOICE COORDINATOR</h2>
